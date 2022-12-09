@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/posts/0.html"/>
+      <url>/posts/0.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>发布订阅者模式</title>
       <link href="/posts/1354.html"/>
       <url>/posts/1354.html</url>
@@ -679,6 +692,25 @@
       <categories>
           
           <category> javascript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MVC、MVP、MVVM</title>
+      <link href="/posts/720d.html"/>
+      <url>/posts/720d.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="MVC：逻辑上就是当用户进行数据交互的时候，C负责唤醒M进行数据交互，M数据交互完成之后唤醒V进行页面刷新"><a href="#MVC：逻辑上就是当用户进行数据交互的时候，C负责唤醒M进行数据交互，M数据交互完成之后唤醒V进行页面刷新" class="headerlink" title="MVC：逻辑上就是当用户进行数据交互的时候，C负责唤醒M进行数据交互，M数据交互完成之后唤醒V进行页面刷新"></a>MVC：逻辑上就是当用户进行数据交互的时候，C负责唤醒M进行数据交互，M数据交互完成之后唤醒V进行页面刷新</h1><h1 id="MVP：和MVC类似，但是在P中实现了将V和M进行耦合，也就是不像MVC那样只能由C控制M，P能够实现P控制M和V"><a href="#MVP：和MVC类似，但是在P中实现了将V和M进行耦合，也就是不像MVC那样只能由C控制M，P能够实现P控制M和V" class="headerlink" title="MVP：和MVC类似，但是在P中实现了将V和M进行耦合，也就是不像MVC那样只能由C控制M，P能够实现P控制M和V"></a>MVP：和MVC类似，但是在P中实现了将V和M进行耦合，也就是不像MVC那样只能由C控制M，P能够实现P控制M和V</h1><h1 id="MVVM：逻辑上也是和MVP差不多，但是VM之间并没有直接的联系，而是通过VM来进行联系的，VM和M之间双向数据绑定，当M发生数据改变的时候，V也就跟随这刷新。主要实现了M和V的数据自动同步"><a href="#MVVM：逻辑上也是和MVP差不多，但是VM之间并没有直接的联系，而是通过VM来进行联系的，VM和M之间双向数据绑定，当M发生数据改变的时候，V也就跟随这刷新。主要实现了M和V的数据自动同步" class="headerlink" title="MVVM：逻辑上也是和MVP差不多，但是VM之间并没有直接的联系，而是通过VM来进行联系的，VM和M之间双向数据绑定，当M发生数据改变的时候，V也就跟随这刷新。主要实现了M和V的数据自动同步"></a>MVVM：逻辑上也是和MVP差不多，但是VM之间并没有直接的联系，而是通过VM来进行联系的，VM和M之间双向数据绑定，当M发生数据改变的时候，V也就跟随这刷新。主要实现了M和V的数据自动同步</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> basis </category>
           
       </categories>
       
