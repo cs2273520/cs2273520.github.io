@@ -118,11 +118,11 @@
     
     
     <entry>
-      <title>new省略的过程</title>
-      <link href="/posts/ab6c.html"/>
-      <url>/posts/ab6c.html</url>
+      <title>api的使用</title>
+      <link href="/posts/9e27.html"/>
+      <url>/posts/9e27.html</url>
       
-        <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">mynew</span>(<span class="params">Func, ...args</span>) &#123;</span><br><span class="line">    <span class="comment">// 1.创建一个新对象</span></span><br><span class="line">    <span class="keyword">const</span> obj = &#123;&#125;</span><br><span class="line">    <span class="comment">// 2.新对象原型指向构造函数原型对象</span></span><br><span class="line">    obj.<span class="property">__proto__</span> = <span class="title class_">Func</span>.<span class="property"><span class="keyword">prototype</span></span></span><br><span class="line">    <span class="comment">// 3.将构建函数的this指向新对象</span></span><br><span class="line">    <span class="keyword">let</span> result = <span class="title class_">Func</span>.<span class="title function_">apply</span>(obj, args)</span><br><span class="line">    <span class="comment">// 4.根据返回值判断</span></span><br><span class="line">    <span class="keyword">return</span> result <span class="keyword">instanceof</span> <span class="title class_">Object</span> ? result : obj</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="1、eval-‘var-a-x3D-0’-执行代码或者表达式"><a href="#1、eval-‘var-a-x3D-0’-执行代码或者表达式" class="headerlink" title="1、eval(‘var a&#x3D;0’);  执行代码或者表达式"></a><strong>1、eval(‘var a&#x3D;0’);  执行代码或者表达式</strong></h1><h1 id="2、数字运算"><a href="#2、数字运算" class="headerlink" title="2、数字运算"></a><strong>2、数字运算</strong></h1><p>向上取整Math.ceil<br>向下取整Math.floor<br>四舍五入Math.round   &#x3D;0.5的时候，负数向正数靠，正数向上取整<br>绝对值Math.abs<br>最大值Math.max   参数为多个参数，不能为数组<br>随机数: Math.floor(Math.random()*(max-min+1))+min(包含max和min，如果不包含max去掉+1就行)</p><h1 id="3、数组"><a href="#3、数组" class="headerlink" title="3、数组"></a><strong>3、数组</strong></h1><p>slice   参数为（start,end）不传参不进行操作，为负数就是从数组尾部开始，返回新的数组<br>splice  用法和slice差不多，但是改变原数组 返回删除的元素<br>pop 移除数组最后一个元素<br>shift 移除数组的第一个元素<br>unshift 添加元素到数组的第一个位置</p><h1 id="4、对象"><a href="#4、对象" class="headerlink" title="4、对象"></a><strong>4、对象</strong></h1><p>hasOwnProperty()方法用于检测一个对象是否含有特定的自身属性，返回一个布尔值。<br>Object.is()，其行为与&#x3D;&#x3D;&#x3D;基本一致，不过有两处不同： +0不等于-0。 NaN等于自身。</p><h1 id="5、字符串"><a href="#5、字符串" class="headerlink" title="5、字符串"></a><strong>5、字符串</strong></h1><p>isNaN(item) 的时候会先将item进行 Number(item) 的隐式转换，然后再isNaN(item)</p><p>parseInt(string,raix)<br>  1 ）注意:string字符串只会被解析从第一个字符开始直到不是数字的字符部分        console.log(parseInt(‘223’));&#x2F;&#x2F;223） 当字符串中间存在非数字,那么就只解析前面是数字的部分字符        console.log(parseInt(‘22e3’));&#x2F;&#x2F;22） 如果字符串中第一个字符就不是数字,那么返回NaN         console.log(parseInt(‘e21’));&#x2F;&#x2F;NaN<br>  4） 第二个参数raix表示进制数，如果值是10就表示转换成10进制</p>]]></content>
       
       
       <categories>
@@ -142,6 +142,25 @@
       <url>/posts/ec4d.html</url>
       
         <content type="html"><![CDATA[<p>localstorage:永久存储在本地<br>sessionStorage:会话级存储    常见应用就是 敏感账号一次性登录<br><strong>相同点：</strong><br>1、均存储在浏览器中<br>2、不会自动发送数据给服务器<br>3、只能存储字符串，对象可通过json,stringfy()进行编码存储</p><p><strong>不同点</strong><br>1、数据存储大小不同 local是20M session是5M<br>2、有效期不同，local是永久，session浏览器关闭失效<br>3、作用域不同，local可以多个页面共享，session只能当前页面使用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>new省略的过程</title>
+      <link href="/posts/ab6c.html"/>
+      <url>/posts/ab6c.html</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">mynew</span>(<span class="params">Func, ...args</span>) &#123;</span><br><span class="line">    <span class="comment">// 1.创建一个新对象</span></span><br><span class="line">    <span class="keyword">const</span> obj = &#123;&#125;</span><br><span class="line">    <span class="comment">// 2.新对象原型指向构造函数原型对象</span></span><br><span class="line">    obj.<span class="property">__proto__</span> = <span class="title class_">Func</span>.<span class="property"><span class="keyword">prototype</span></span></span><br><span class="line">    <span class="comment">// 3.将构建函数的this指向新对象</span></span><br><span class="line">    <span class="keyword">let</span> result = <span class="title class_">Func</span>.<span class="title function_">apply</span>(obj, args)</span><br><span class="line">    <span class="comment">// 4.根据返回值判断</span></span><br><span class="line">    <span class="keyword">return</span> result <span class="keyword">instanceof</span> <span class="title class_">Object</span> ? result : obj</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -194,177 +213,6 @@
     
     
     <entry>
-      <title>api的使用</title>
-      <link href="/posts/9e27.html"/>
-      <url>/posts/9e27.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="1、eval-‘var-a-x3D-0’-执行代码或者表达式"><a href="#1、eval-‘var-a-x3D-0’-执行代码或者表达式" class="headerlink" title="1、eval(‘var a&#x3D;0’);  执行代码或者表达式"></a><strong>1、eval(‘var a&#x3D;0’);  执行代码或者表达式</strong></h1><h1 id="2、数字运算"><a href="#2、数字运算" class="headerlink" title="2、数字运算"></a><strong>2、数字运算</strong></h1><p>向上取整Math.ceil<br>向下取整Math.floor<br>四舍五入Math.round   &#x3D;0.5的时候，负数向正数靠，正数向上取整<br>绝对值Math.abs<br>最大值Math.max   参数为多个参数，不能为数组<br>随机数: Math.floor(Math.random()*(max-min+1))+min(包含max和min，如果不包含max去掉+1就行)</p><h1 id="3、数组"><a href="#3、数组" class="headerlink" title="3、数组"></a><strong>3、数组</strong></h1><p>slice   参数为（start,end）不传参不进行操作，为负数就是从数组尾部开始，返回新的数组<br>splice  用法和slice差不多，但是改变原数组 返回删除的元素<br>pop 移除数组最后一个元素<br>shift 移除数组的第一个元素<br>unshift 添加元素到数组的第一个位置</p><h1 id="4、对象"><a href="#4、对象" class="headerlink" title="4、对象"></a><strong>4、对象</strong></h1><p>hasOwnProperty()方法用于检测一个对象是否含有特定的自身属性，返回一个布尔值。<br>Object.is()，其行为与&#x3D;&#x3D;&#x3D;基本一致，不过有两处不同： +0不等于-0。 NaN等于自身。</p><h1 id="5、字符串"><a href="#5、字符串" class="headerlink" title="5、字符串"></a><strong>5、字符串</strong></h1><p>isNaN(item) 的时候会先将item进行 Number(item) 的隐式转换，然后再isNaN(item)</p><p>parseInt(string,raix)<br>  1 ）注意:string字符串只会被解析从第一个字符开始直到不是数字的字符部分        console.log(parseInt(‘223’));&#x2F;&#x2F;223） 当字符串中间存在非数字,那么就只解析前面是数字的部分字符        console.log(parseInt(‘22e3’));&#x2F;&#x2F;22） 如果字符串中第一个字符就不是数字,那么返回NaN         console.log(parseInt(‘e21’));&#x2F;&#x2F;NaN<br>  4） 第二个参数raix表示进制数，如果值是10就表示转换成10进制</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>webpack-01下载</title>
-      <link href="/posts/baaf.html"/>
-      <url>/posts/baaf.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="1、下载webpack"><a href="#1、下载webpack" class="headerlink" title="1、下载webpack"></a>1、下载webpack</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i webpack webpack-cli -D</span><br></pre></td></tr></table></figure><h1 id="2、在项目的根目录下创建webpack-config-js"><a href="#2、在项目的根目录下创建webpack-config-js" class="headerlink" title="2、在项目的根目录下创建webpack.config.js"></a>2、在项目的根目录下创建webpack.config.js</h1><h1 id="3、在webpack-config-js进行配置"><a href="#3、在webpack-config-js进行配置" class="headerlink" title="3、在webpack.config.js进行配置"></a>3、在webpack.config.js进行配置</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> webpack </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>webpack-02配置</title>
-      <link href="/posts/2481.html"/>
-      <url>/posts/2481.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="1、入口文件entry"><a href="#1、入口文件entry" class="headerlink" title="1、入口文件entry"></a>1、入口文件entry</h1><h1 id="2、输出output"><a href="#2、输出output" class="headerlink" title="2、输出output"></a>2、输出output</h1><h1 id="3、加载器module"><a href="#3、加载器module" class="headerlink" title="3、加载器module"></a>3、加载器module</h1><h1 id="4、插件plugins"><a href="#4、插件plugins" class="headerlink" title="4、插件plugins"></a>4、插件plugins</h1><h1 id="5、mode模式"><a href="#5、mode模式" class="headerlink" title="5、mode模式"></a>5、mode模式</h1><h1 id="6、devServer开发模式专用的一个api"><a href="#6、devServer开发模式专用的一个api" class="headerlink" title="6、devServer开发模式专用的一个api"></a>6、devServer开发模式专用的一个api</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> path=<span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> =&#123;</span><br><span class="line">    <span class="comment">//入口</span></span><br><span class="line">    <span class="attr">entry</span>:<span class="string">&quot;./src/main.js&quot;</span>,</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//输出</span></span><br><span class="line">    <span class="attr">output</span>:&#123;</span><br><span class="line">        <span class="comment">//文件的输出路径</span></span><br><span class="line">        <span class="attr">path</span>:path.<span class="title function_">resolve</span>(__dirname,<span class="string">&#x27;dist&#x27;</span>),<span class="comment">//绝对路径</span></span><br><span class="line">        <span class="attr">filename</span>:<span class="string">&quot;main.js&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//加载器</span></span><br><span class="line">    <span class="attr">module</span>:&#123;</span><br><span class="line">        <span class="attr">rules</span>:[</span><br><span class="line">            <span class="comment">//loader的配置</span></span><br><span class="line">            &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, </span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&#x27;style-loader&#x27;</span>,<span class="string">&#x27;css-loader&#x27;</span>]<span class="comment">//将css资源编译成commonjs的模块到js中</span></span><br><span class="line">        &#125;,</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//插件</span></span><br><span class="line">    <span class="attr">plugins</span>:[</span><br><span class="line">        <span class="comment">//plugin的配置</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//模式</span></span><br><span class="line">    <span class="attr">mode</span>:<span class="string">&#x27;development&#x27;</span>,</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> webpack </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>webpack-03图片</title>
-      <link href="/posts/70e1.html"/>
-      <url>/posts/70e1.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="在webpack-config-js中的加载器配置"><a href="#在webpack-config-js中的加载器配置" class="headerlink" title="在webpack.config.js中的加载器配置"></a>在webpack.config.js中的加载器配置</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//加载器</span></span><br><span class="line">    <span class="attr">module</span>:&#123;</span><br><span class="line">        <span class="attr">rules</span>:[</span><br><span class="line">            <span class="comment">//loader的配置</span></span><br><span class="line">            &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, </span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&#x27;style-loader&#x27;</span>,<span class="string">&#x27;css-loader&#x27;</span>]<span class="comment">//将css资源编译成commonjs的模块到js中</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;   <span class="attr">test</span>:<span class="regexp">/\.(png|jpe?g|gif|webp|svg)$/</span>,</span><br><span class="line">            <span class="attr">type</span>:<span class="string">&#x27;asset&#x27;</span>,</span><br><span class="line">            <span class="attr">parser</span>: &#123;</span><br><span class="line">                <span class="attr">dataUrlCondition</span>: &#123;</span><br><span class="line">                    <span class="comment">//小于10kb的图片转base64</span></span><br><span class="line">                    <span class="comment">//优点:减少请求数量,缺点:体积增加</span></span><br><span class="line">                  <span class="attr">maxSize</span>: <span class="number">10</span> * <span class="number">1024</span> <span class="comment">// 4kb</span></span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> webpack </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>webpack-04自动清空上次打包内容</title>
-      <link href="/posts/eaeb.html"/>
-      <url>/posts/eaeb.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="在output中加入"><a href="#在output中加入" class="headerlink" title="在output中加入:"></a>在output中加入:</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clean:true,</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> webpack </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>webpack-06webpack自动化</title>
-      <link href="/posts/9543.html"/>
-      <url>/posts/9543.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i webpack-dev-server -D</span><br></pre></td></tr></table></figure><h1 id="2、webpack-config-js进行配置"><a href="#2、webpack-config-js进行配置" class="headerlink" title="2、webpack.config.js进行配置"></a>2、webpack.config.js进行配置</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//开发服务器</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        host:&#x27;localhost&#x27;,</span><br><span class="line">        port:&#x27;3000&#x27;,</span><br><span class="line">        open:true,</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure><h1 id="3、启动"><a href="#3、启动" class="headerlink" title="3、启动"></a>3、启动</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx webpack server</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> webpack </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>webpack-05处理html资源</title>
-      <link href="/posts/ddd1.html"/>
-      <url>/posts/ddd1.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save-dev html-webpack-plugin</span><br></pre></td></tr></table></figure><h1 id="2、引入"><a href="#2、引入" class="headerlink" title="2、引入"></a>2、引入</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">entry</span>: <span class="string">&#x27;index.js&#x27;</span>,</span><br><span class="line">  <span class="attr">output</span>: &#123;</span><br><span class="line">    <span class="attr">path</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;./dist&#x27;</span>),</span><br><span class="line">    <span class="attr">filename</span>: <span class="string">&#x27;index_bundle.js&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>()],  <span class="comment">//这里是关键</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> webpack </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>webpack-07生产模式以及开发模式</title>
-      <link href="/posts/cae5.html"/>
-      <url>/posts/cae5.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="生产模式"><a href="#生产模式" class="headerlink" title="生产模式"></a>生产模式</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx webpack --config ./config/webpack.prod.js</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> path=<span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> =&#123;</span><br><span class="line">    <span class="comment">//入口</span></span><br><span class="line">    <span class="attr">entry</span>:<span class="string">&quot;./src/main.js&quot;</span>,</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//输出</span></span><br><span class="line">    <span class="attr">output</span>:&#123;</span><br><span class="line">        <span class="comment">//所有文件的输出路径</span></span><br><span class="line">        <span class="comment">//__dirname nodejs变量，代表当前文件的文件夹目录</span></span><br><span class="line">        <span class="attr">path</span>:path.<span class="title function_">resolve</span>(__dirname,<span class="string">&#x27;../dist&#x27;</span>),<span class="comment">//绝对路径</span></span><br><span class="line">        <span class="comment">//文件名</span></span><br><span class="line">        <span class="attr">filename</span>:<span class="string">&quot;static/js/main.js&quot;</span>,</span><br><span class="line">        <span class="comment">//自动清空上次打包的内容（原理就是将dist整个目录进行清空在进行打包）</span></span><br><span class="line">        <span class="attr">clean</span>:<span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//加载器</span></span><br><span class="line">    <span class="attr">module</span>:&#123;</span><br><span class="line">        <span class="attr">rules</span>:[</span><br><span class="line">            <span class="comment">//loader的配置</span></span><br><span class="line">            &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, </span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&#x27;style-loader&#x27;</span>,<span class="string">&#x27;css-loader&#x27;</span>]<span class="comment">//将css资源编译成commonjs的模块到js中</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;   <span class="attr">test</span>:<span class="regexp">/\.(png|jpe?g|gif|webp|svg)$/</span>,</span><br><span class="line">            <span class="attr">type</span>:<span class="string">&#x27;asset&#x27;</span>,</span><br><span class="line">            <span class="attr">parser</span>: &#123;</span><br><span class="line">                <span class="attr">dataUrlCondition</span>: &#123;</span><br><span class="line">                    <span class="comment">//小于10kb的图片转base64</span></span><br><span class="line">                    <span class="comment">//优点:减少请求数量,缺点:体积增加</span></span><br><span class="line">                  <span class="attr">maxSize</span>: <span class="number">10</span> * <span class="number">1024</span> <span class="comment">// 4kb</span></span><br><span class="line">                &#125;</span><br><span class="line">              &#125;,</span><br><span class="line">              <span class="attr">generator</span>:&#123;</span><br><span class="line">                <span class="attr">filename</span>:<span class="string">&#x27;static/images/[hash:10][ext][query]&#x27;</span></span><br><span class="line">              &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;   <span class="attr">test</span>:<span class="regexp">/\.(ttf|woff2|mp3|avi)$/</span>,</span><br><span class="line">            <span class="attr">type</span>:<span class="string">&#x27;asset/resource&#x27;</span>,</span><br><span class="line">              <span class="attr">generator</span>:&#123;</span><br><span class="line">                <span class="attr">filename</span>:<span class="string">&#x27;static/media/[hash:10][ext][query]&#x27;</span></span><br><span class="line">              &#125;</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//插件</span></span><br><span class="line">    <span class="attr">plugins</span>:[</span><br><span class="line">        <span class="comment">//plugin的配置</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="comment">//模板:以public/index.html文件创建新的html文件</span></span><br><span class="line">            <span class="comment">//新的文件特点:1、结构和原来一致 2、自动引入打包的资源</span></span><br><span class="line">            <span class="attr">template</span>:path.<span class="title function_">resolve</span>(__dirname,<span class="string">&quot;../public/index.html&quot;</span>),</span><br><span class="line">        &#125;   </span><br><span class="line">        ),</span><br><span class="line">    ],</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//模式</span></span><br><span class="line">    <span class="attr">mode</span>:<span class="string">&quot;production&quot;</span>,</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx webpack serve --config ./config/webpack.dev.js</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> path=<span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> =&#123;</span><br><span class="line">    <span class="comment">//入口</span></span><br><span class="line">    <span class="attr">entry</span>:<span class="string">&quot;./src/main.js&quot;</span>,</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//输出</span></span><br><span class="line">    <span class="attr">output</span>:&#123;</span><br><span class="line">        <span class="comment">//所有文件的输出路径</span></span><br><span class="line">        <span class="comment">//开发环境没有输出</span></span><br><span class="line">        <span class="attr">path</span>:<span class="literal">undefined</span>,<span class="comment">//绝对路径</span></span><br><span class="line">        <span class="comment">//文件名</span></span><br><span class="line">        <span class="attr">filename</span>:<span class="string">&quot;static/js/main.js&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//加载器</span></span><br><span class="line">    <span class="attr">module</span>:&#123;</span><br><span class="line">        <span class="attr">rules</span>:[</span><br><span class="line">            <span class="comment">//loader的配置</span></span><br><span class="line">            &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, </span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&#x27;style-loader&#x27;</span>,<span class="string">&#x27;css-loader&#x27;</span>]<span class="comment">//将css资源编译成commonjs的模块到js中</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;   <span class="attr">test</span>:<span class="regexp">/\.(png|jpe?g|gif|webp|svg)$/</span>,</span><br><span class="line">            <span class="attr">type</span>:<span class="string">&#x27;asset&#x27;</span>,</span><br><span class="line">            <span class="attr">parser</span>: &#123;</span><br><span class="line">                <span class="attr">dataUrlCondition</span>: &#123;</span><br><span class="line">                    <span class="comment">//小于10kb的图片转base64</span></span><br><span class="line">                    <span class="comment">//优点:减少请求数量,缺点:体积增加</span></span><br><span class="line">                  <span class="attr">maxSize</span>: <span class="number">10</span> * <span class="number">1024</span> <span class="comment">// 4kb</span></span><br><span class="line">                &#125;</span><br><span class="line">              &#125;,</span><br><span class="line">              <span class="attr">generator</span>:&#123;</span><br><span class="line">                <span class="attr">filename</span>:<span class="string">&#x27;static/images/[hash:10][ext][query]&#x27;</span></span><br><span class="line">              &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;   <span class="attr">test</span>:<span class="regexp">/\.(ttf|woff2|mp3|avi)$/</span>,</span><br><span class="line">            <span class="attr">type</span>:<span class="string">&#x27;asset/resource&#x27;</span>,</span><br><span class="line">              <span class="attr">generator</span>:&#123;</span><br><span class="line">                <span class="attr">filename</span>:<span class="string">&#x27;static/media/[hash:10][ext][query]&#x27;</span></span><br><span class="line">              &#125;</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//插件</span></span><br><span class="line">    <span class="attr">plugins</span>:[</span><br><span class="line">        <span class="comment">//plugin的配置</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="comment">//模板:以public/index.html文件创建新的html文件</span></span><br><span class="line">            <span class="comment">//新的文件特点:1、结构和原来一致 2、自动引入打包的资源</span></span><br><span class="line">            <span class="attr">template</span>:path.<span class="title function_">resolve</span>(__dirname,<span class="string">&quot;../public/index.html&quot;</span>),</span><br><span class="line">        &#125;   </span><br><span class="line">        ),</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//开发服务器,不会输出资源，在内存中编译打包的</span></span><br><span class="line">    <span class="attr">devServer</span>:&#123;</span><br><span class="line">        <span class="attr">host</span>:<span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">        <span class="attr">port</span>:<span class="string">&#x27;3000&#x27;</span>,</span><br><span class="line">        <span class="attr">open</span>:<span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//模式</span></span><br><span class="line">    <span class="attr">mode</span>:<span class="string">&#x27;development&#x27;</span>,</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="其中的区别："><a href="#其中的区别：" class="headerlink" title="其中的区别："></a>其中的区别：</h1><h2 id="1、开发没有输出，也就是output里面的path设置成undefined"><a href="#1、开发没有输出，也就是output里面的path设置成undefined" class="headerlink" title="1、开发没有输出，也就是output里面的path设置成undefined"></a>1、开发没有输出，也就是output里面的path设置成undefined</h2><h2 id="2、开发者有开发服务器devServer"><a href="#2、开发者有开发服务器devServer" class="headerlink" title="2、开发者有开发服务器devServer{}"></a>2、开发者有开发服务器devServer{}</h2><h2 id="3、开发者的mode是development，生产者是production"><a href="#3、开发者的mode是development，生产者是production" class="headerlink" title="3、开发者的mode是development，生产者是production"></a>3、开发者的mode是development，生产者是production</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> webpack </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>webpack-08启动命令优化</title>
-      <link href="/posts/340b.html"/>
-      <url>/posts/340b.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="1、在package-json中"><a href="#1、在package-json中" class="headerlink" title="1、在package.json中"></a>1、在package.json中</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>:<span class="string">&quot;npm run dev&quot;</span>,</span><br><span class="line">    <span class="string">&quot;dev&quot;</span>:<span class="string">&quot;webpack serve --config ./config/webpack.dev.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build&quot;</span>:<span class="string">&quot;webpack --config ./config/webpack.prod.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure><p><strong>“dev”  对应的webpack.dev.config文件npm run dev</strong></p><p><strong>“build”对应的webpack.prod.config文件npm run build</strong></p><p><strong>“start”运行上面的自定义指令”dev”         npm start(也就是npm run dev 等价于 npm start )</strong></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> webpack </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>promise.all与promise.race的区别</title>
       <link href="/posts/5615.html"/>
       <url>/posts/5615.html</url>
@@ -408,6 +256,25 @@
       <url>/posts/8f9b.html</url>
       
         <content type="html"><![CDATA[<h1 id="1-方法中的this"><a href="#1-方法中的this" class="headerlink" title="1.方法中的this"></a>1.方法中的this</h1><p>在对象方法中，this指的是此方法的“拥有者”。<br>this代表person对象</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">           <span class="attr">firstName</span>:<span class="string">&quot;Bill&quot;</span>,</span><br><span class="line">           <span class="attr">lastName</span>:<span class="string">&quot;Gates&quot;</span>,</span><br><span class="line">           <span class="attr">id</span>:<span class="number">678</span>,</span><br><span class="line">           <span class="attr">fullName</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">               <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">firstName</span> + <span class="string">&quot; &quot;</span> + <span class="variable language_">this</span>.<span class="property">lastName</span>;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;;</span><br></pre></td></tr></table></figure><h1 id="2-单独的this"><a href="#2-单独的this" class="headerlink" title="2.单独的this"></a>2.单独的this</h1><h2 id="1-在单独使用时，拥有者是全局对象，this指的是全局对象"><a href="#1-在单独使用时，拥有者是全局对象，this指的是全局对象" class="headerlink" title="(1)在单独使用时，拥有者是全局对象，this指的是全局对象"></a>(1)在单独使用时，拥有者是全局对象，this指的是全局对象</h2><p>在浏览器窗口中，全局对象是[object Window]:</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="variable language_">this</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;demo&quot;</span>).<span class="property">innerHTML</span> = x;</span><br></pre></td></tr></table></figure><h2 id="2-在严格模式中，如果单独使用，那么this指的是全局对象-object-Window"><a href="#2-在严格模式中，如果单独使用，那么this指的是全局对象-object-Window" class="headerlink" title="(2)在严格模式中，如果单独使用，那么this指的是全局对象[object Window]:"></a>(2)在严格模式中，如果单独使用，那么this指的是全局对象[object Window]:</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> x = <span class="variable language_">this</span>;</span><br></pre></td></tr></table></figure><h1 id="3-函数中的this（默认）"><a href="#3-函数中的this（默认）" class="headerlink" title="3.函数中的this（默认）"></a>3.函数中的this（默认）</h1><h1 id="在js函数中，函数的拥有者默认绑定this-因此，在函数中，this指的是全局对象-object-Window-4-函数中的this（严格模式）"><a href="#在js函数中，函数的拥有者默认绑定this-因此，在函数中，this指的是全局对象-object-Window-4-函数中的this（严格模式）" class="headerlink" title="在js函数中，函数的拥有者默认绑定this.因此，在函数中，this指的是全局对象[object Window]4.函数中的this（严格模式）"></a>在js函数中，函数的拥有者默认绑定this.<br>因此，在函数中，this指的是全局对象[object Window]<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myFunction</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><br>4.函数中的this（严格模式）</h1><p>js严格模式不允许默认绑定，因此，在函数中使用时，在严格模式下，this是未定义的undefined</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">“use strict”;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">myFunction</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="5-事件处理程序中的this"><a href="#5-事件处理程序中的this" class="headerlink" title="5.事件处理程序中的this"></a>5.事件处理程序中的this</h1><p>this指的是html元素，如下面例子中，this指的是button</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;button onclick = <span class="string">&quot;this.style.display=&#x27;none&#x27;&quot;</span>&gt;</span><br><span class="line">     点击来删除我！</span><br><span class="line">&lt;/button&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>typeof</title>
+      <link href="/posts/7b30.html"/>
+      <url>/posts/7b30.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/js/typeof.png"></p>]]></content>
       
       
       <categories>
@@ -479,49 +346,11 @@
     
     
     <entry>
-      <title>typeof</title>
-      <link href="/posts/7b30.html"/>
-      <url>/posts/7b30.html</url>
-      
-        <content type="html"><![CDATA[<p><img src="/images/js/typeof.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>函数中的argument对象</title>
       <link href="/posts/8248.html"/>
       <url>/posts/8248.html</url>
       
         <content type="html"><![CDATA[<p><img src="/images/js/%E5%87%BD%E6%95%B0%E4%B8%ADargument%E5%AF%B9%E8%B1%A1.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>观察者模式</title>
-      <link href="/posts/1e3a.html"/>
-      <url>/posts/1e3a.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="观察者-Observer（A）-被观察Object（B）观察者通过订阅被观察者的状态，一旦被观察者的状态发生改变，那么就通知观察者进行观察的状态改变。实现思路：B中设置状态，设置更改状态的方法，设置将A放到B身上；A中设置观察B状态的方法；B中触发更改状态的方法，就触发A中观察B状态的方法；"><a href="#观察者-Observer（A）-被观察Object（B）观察者通过订阅被观察者的状态，一旦被观察者的状态发生改变，那么就通知观察者进行观察的状态改变。实现思路：B中设置状态，设置更改状态的方法，设置将A放到B身上；A中设置观察B状态的方法；B中触发更改状态的方法，就触发A中观察B状态的方法；" class="headerlink" title="观察者 Observer（A） 被观察Object（B）观察者通过订阅被观察者的状态，一旦被观察者的状态发生改变，那么就通知观察者进行观察的状态改变。实现思路：B中设置状态，设置更改状态的方法，设置将A放到B身上；A中设置观察B状态的方法；B中触发更改状态的方法，就触发A中观察B状态的方法；"></a>观察者 Observer（A） 被观察Object（B）<br>观察者通过订阅被观察者的状态，一旦被观察者的状态发生改变，那么就通知观察者进行观察的状态改变。<br>实现思路：<br>B中设置状态，设置更改状态的方法，设置将A放到B身上；<br>A中设置观察B状态的方法；<br>B中触发更改状态的方法，就触发A中观察B状态的方法；</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">class</span> <span class="title class_">Subject</span>&#123;</span><br><span class="line">            <span class="title function_">constructor</span> (name)&#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">name</span>=name</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">state</span>=<span class="string">&#x27;开心&#x27;</span></span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">Observers</span>=[]</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 需要将观察者放到自己身上</span></span><br><span class="line">            <span class="title function_">attach</span>(<span class="params">ther</span>)&#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">Observers</span>.<span class="title function_">push</span>(ther);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 更新观察者状态</span></span><br><span class="line">            <span class="title function_">setState</span>(<span class="params">state</span>)&#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">state</span>=state;</span><br><span class="line">                <span class="comment">// 循环取出每个观察者</span></span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">Observers</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">ther</span>=&gt;</span>&#123;</span><br><span class="line">                    ther.<span class="title function_">update</span>(<span class="variable language_">this</span>)</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 观察者</span></span><br><span class="line">        <span class="keyword">class</span> <span class="title class_">Observer</span>&#123;</span><br><span class="line">            <span class="title function_">constructor</span>(<span class="params">name</span>)&#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">name</span>=name</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 观察小宝宝的状态</span></span><br><span class="line">            <span class="title function_">update</span>(<span class="params">subject</span>)&#123;</span><br><span class="line">                <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>+<span class="string">&#x27;:&#x27;</span>+subject.<span class="property">name</span>+<span class="string">&#x27;当前状态：&#x27;</span>+subject.<span class="property">state</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> baby=<span class="keyword">new</span> <span class="title class_">Subject</span>(<span class="string">&#x27;小宝宝&#x27;</span>);</span><br><span class="line">        <span class="keyword">let</span> father=<span class="keyword">new</span> <span class="title class_">Observer</span>(<span class="string">&#x27;爸爸&#x27;</span>);</span><br><span class="line">        <span class="keyword">let</span> mather=<span class="keyword">new</span> <span class="title class_">Observer</span>(<span class="string">&#x27;妈妈&#x27;</span>);</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        baby.<span class="title function_">attach</span>(father);</span><br><span class="line">        baby.<span class="title function_">attach</span>(mather);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        baby.<span class="title function_">setState</span>(<span class="string">&#x27;不开心&#x27;</span>);</span><br><span class="line">        baby.<span class="title function_">setState</span>(<span class="string">&#x27;非常开心&#x27;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -555,6 +384,25 @@
     
     
     <entry>
+      <title>观察者模式</title>
+      <link href="/posts/1e3a.html"/>
+      <url>/posts/1e3a.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="观察者-Observer（A）-被观察Object（B）观察者通过订阅被观察者的状态，一旦被观察者的状态发生改变，那么就通知观察者进行观察的状态改变。实现思路：B中设置状态，设置更改状态的方法，设置将A放到B身上；A中设置观察B状态的方法；B中触发更改状态的方法，就触发A中观察B状态的方法；"><a href="#观察者-Observer（A）-被观察Object（B）观察者通过订阅被观察者的状态，一旦被观察者的状态发生改变，那么就通知观察者进行观察的状态改变。实现思路：B中设置状态，设置更改状态的方法，设置将A放到B身上；A中设置观察B状态的方法；B中触发更改状态的方法，就触发A中观察B状态的方法；" class="headerlink" title="观察者 Observer（A） 被观察Object（B）观察者通过订阅被观察者的状态，一旦被观察者的状态发生改变，那么就通知观察者进行观察的状态改变。实现思路：B中设置状态，设置更改状态的方法，设置将A放到B身上；A中设置观察B状态的方法；B中触发更改状态的方法，就触发A中观察B状态的方法；"></a>观察者 Observer（A） 被观察Object（B）<br>观察者通过订阅被观察者的状态，一旦被观察者的状态发生改变，那么就通知观察者进行观察的状态改变。<br>实现思路：<br>B中设置状态，设置更改状态的方法，设置将A放到B身上；<br>A中设置观察B状态的方法；<br>B中触发更改状态的方法，就触发A中观察B状态的方法；</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">class</span> <span class="title class_">Subject</span>&#123;</span><br><span class="line">            <span class="title function_">constructor</span> (name)&#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">name</span>=name</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">state</span>=<span class="string">&#x27;开心&#x27;</span></span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">Observers</span>=[]</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 需要将观察者放到自己身上</span></span><br><span class="line">            <span class="title function_">attach</span>(<span class="params">ther</span>)&#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">Observers</span>.<span class="title function_">push</span>(ther);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 更新观察者状态</span></span><br><span class="line">            <span class="title function_">setState</span>(<span class="params">state</span>)&#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">state</span>=state;</span><br><span class="line">                <span class="comment">// 循环取出每个观察者</span></span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">Observers</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">ther</span>=&gt;</span>&#123;</span><br><span class="line">                    ther.<span class="title function_">update</span>(<span class="variable language_">this</span>)</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 观察者</span></span><br><span class="line">        <span class="keyword">class</span> <span class="title class_">Observer</span>&#123;</span><br><span class="line">            <span class="title function_">constructor</span>(<span class="params">name</span>)&#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">name</span>=name</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 观察小宝宝的状态</span></span><br><span class="line">            <span class="title function_">update</span>(<span class="params">subject</span>)&#123;</span><br><span class="line">                <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>+<span class="string">&#x27;:&#x27;</span>+subject.<span class="property">name</span>+<span class="string">&#x27;当前状态：&#x27;</span>+subject.<span class="property">state</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> baby=<span class="keyword">new</span> <span class="title class_">Subject</span>(<span class="string">&#x27;小宝宝&#x27;</span>);</span><br><span class="line">        <span class="keyword">let</span> father=<span class="keyword">new</span> <span class="title class_">Observer</span>(<span class="string">&#x27;爸爸&#x27;</span>);</span><br><span class="line">        <span class="keyword">let</span> mather=<span class="keyword">new</span> <span class="title class_">Observer</span>(<span class="string">&#x27;妈妈&#x27;</span>);</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        baby.<span class="title function_">attach</span>(father);</span><br><span class="line">        baby.<span class="title function_">attach</span>(mather);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        baby.<span class="title function_">setState</span>(<span class="string">&#x27;不开心&#x27;</span>);</span><br><span class="line">        baby.<span class="title function_">setState</span>(<span class="string">&#x27;非常开心&#x27;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>闭包</title>
       <link href="/posts/1cf7.html"/>
       <url>/posts/1cf7.html</url>
@@ -565,6 +413,158 @@
       <categories>
           
           <category> javascript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>webpack-01下载</title>
+      <link href="/posts/baaf.html"/>
+      <url>/posts/baaf.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1、下载webpack"><a href="#1、下载webpack" class="headerlink" title="1、下载webpack"></a>1、下载webpack</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i webpack webpack-cli -D</span><br></pre></td></tr></table></figure><h1 id="2、在项目的根目录下创建webpack-config-js"><a href="#2、在项目的根目录下创建webpack-config-js" class="headerlink" title="2、在项目的根目录下创建webpack.config.js"></a>2、在项目的根目录下创建webpack.config.js</h1><h1 id="3、在webpack-config-js进行配置"><a href="#3、在webpack-config-js进行配置" class="headerlink" title="3、在webpack.config.js进行配置"></a>3、在webpack.config.js进行配置</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> webpack </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>webpack-02配置</title>
+      <link href="/posts/2481.html"/>
+      <url>/posts/2481.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1、入口文件entry"><a href="#1、入口文件entry" class="headerlink" title="1、入口文件entry"></a>1、入口文件entry</h1><h1 id="2、输出output"><a href="#2、输出output" class="headerlink" title="2、输出output"></a>2、输出output</h1><h1 id="3、加载器module"><a href="#3、加载器module" class="headerlink" title="3、加载器module"></a>3、加载器module</h1><h1 id="4、插件plugins"><a href="#4、插件plugins" class="headerlink" title="4、插件plugins"></a>4、插件plugins</h1><h1 id="5、mode模式"><a href="#5、mode模式" class="headerlink" title="5、mode模式"></a>5、mode模式</h1><h1 id="6、devServer开发模式专用的一个api"><a href="#6、devServer开发模式专用的一个api" class="headerlink" title="6、devServer开发模式专用的一个api"></a>6、devServer开发模式专用的一个api</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> path=<span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> =&#123;</span><br><span class="line">    <span class="comment">//入口</span></span><br><span class="line">    <span class="attr">entry</span>:<span class="string">&quot;./src/main.js&quot;</span>,</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//输出</span></span><br><span class="line">    <span class="attr">output</span>:&#123;</span><br><span class="line">        <span class="comment">//文件的输出路径</span></span><br><span class="line">        <span class="attr">path</span>:path.<span class="title function_">resolve</span>(__dirname,<span class="string">&#x27;dist&#x27;</span>),<span class="comment">//绝对路径</span></span><br><span class="line">        <span class="attr">filename</span>:<span class="string">&quot;main.js&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//加载器</span></span><br><span class="line">    <span class="attr">module</span>:&#123;</span><br><span class="line">        <span class="attr">rules</span>:[</span><br><span class="line">            <span class="comment">//loader的配置</span></span><br><span class="line">            &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, </span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&#x27;style-loader&#x27;</span>,<span class="string">&#x27;css-loader&#x27;</span>]<span class="comment">//将css资源编译成commonjs的模块到js中</span></span><br><span class="line">        &#125;,</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//插件</span></span><br><span class="line">    <span class="attr">plugins</span>:[</span><br><span class="line">        <span class="comment">//plugin的配置</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//模式</span></span><br><span class="line">    <span class="attr">mode</span>:<span class="string">&#x27;development&#x27;</span>,</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> webpack </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>webpack-03图片</title>
+      <link href="/posts/70e1.html"/>
+      <url>/posts/70e1.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="在webpack-config-js中的加载器配置"><a href="#在webpack-config-js中的加载器配置" class="headerlink" title="在webpack.config.js中的加载器配置"></a>在webpack.config.js中的加载器配置</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//加载器</span></span><br><span class="line">    <span class="attr">module</span>:&#123;</span><br><span class="line">        <span class="attr">rules</span>:[</span><br><span class="line">            <span class="comment">//loader的配置</span></span><br><span class="line">            &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, </span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&#x27;style-loader&#x27;</span>,<span class="string">&#x27;css-loader&#x27;</span>]<span class="comment">//将css资源编译成commonjs的模块到js中</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;   <span class="attr">test</span>:<span class="regexp">/\.(png|jpe?g|gif|webp|svg)$/</span>,</span><br><span class="line">            <span class="attr">type</span>:<span class="string">&#x27;asset&#x27;</span>,</span><br><span class="line">            <span class="attr">parser</span>: &#123;</span><br><span class="line">                <span class="attr">dataUrlCondition</span>: &#123;</span><br><span class="line">                    <span class="comment">//小于10kb的图片转base64</span></span><br><span class="line">                    <span class="comment">//优点:减少请求数量,缺点:体积增加</span></span><br><span class="line">                  <span class="attr">maxSize</span>: <span class="number">10</span> * <span class="number">1024</span> <span class="comment">// 4kb</span></span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> webpack </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>webpack-05处理html资源</title>
+      <link href="/posts/ddd1.html"/>
+      <url>/posts/ddd1.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save-dev html-webpack-plugin</span><br></pre></td></tr></table></figure><h1 id="2、引入"><a href="#2、引入" class="headerlink" title="2、引入"></a>2、引入</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">entry</span>: <span class="string">&#x27;index.js&#x27;</span>,</span><br><span class="line">  <span class="attr">output</span>: &#123;</span><br><span class="line">    <span class="attr">path</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;./dist&#x27;</span>),</span><br><span class="line">    <span class="attr">filename</span>: <span class="string">&#x27;index_bundle.js&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>()],  <span class="comment">//这里是关键</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> webpack </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>webpack-04自动清空上次打包内容</title>
+      <link href="/posts/eaeb.html"/>
+      <url>/posts/eaeb.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="在output中加入"><a href="#在output中加入" class="headerlink" title="在output中加入:"></a>在output中加入:</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clean:true,</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> webpack </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>webpack-06webpack自动化</title>
+      <link href="/posts/9543.html"/>
+      <url>/posts/9543.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1、下载测试"><a href="#1、下载测试" class="headerlink" title="1、下载测试"></a>1、下载测试</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i webpack-dev-server -D</span><br></pre></td></tr></table></figure><h1 id="2、webpack-config-js进行配置"><a href="#2、webpack-config-js进行配置" class="headerlink" title="2、webpack.config.js进行配置"></a>2、webpack.config.js进行配置</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//开发服务器</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        host:&#x27;localhost&#x27;,</span><br><span class="line">        port:&#x27;3000&#x27;,</span><br><span class="line">        open:true,</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure><h1 id="3、启动"><a href="#3、启动" class="headerlink" title="3、启动"></a>3、启动</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx webpack server</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> webpack </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>webpack-07生产模式以及开发模式</title>
+      <link href="/posts/cae5.html"/>
+      <url>/posts/cae5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="生产模式"><a href="#生产模式" class="headerlink" title="生产模式"></a>生产模式</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx webpack --config ./config/webpack.prod.js</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> path=<span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> =&#123;</span><br><span class="line">    <span class="comment">//入口</span></span><br><span class="line">    <span class="attr">entry</span>:<span class="string">&quot;./src/main.js&quot;</span>,</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//输出</span></span><br><span class="line">    <span class="attr">output</span>:&#123;</span><br><span class="line">        <span class="comment">//所有文件的输出路径</span></span><br><span class="line">        <span class="comment">//__dirname nodejs变量，代表当前文件的文件夹目录</span></span><br><span class="line">        <span class="attr">path</span>:path.<span class="title function_">resolve</span>(__dirname,<span class="string">&#x27;../dist&#x27;</span>),<span class="comment">//绝对路径</span></span><br><span class="line">        <span class="comment">//文件名</span></span><br><span class="line">        <span class="attr">filename</span>:<span class="string">&quot;static/js/main.js&quot;</span>,</span><br><span class="line">        <span class="comment">//自动清空上次打包的内容（原理就是将dist整个目录进行清空在进行打包）</span></span><br><span class="line">        <span class="attr">clean</span>:<span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//加载器</span></span><br><span class="line">    <span class="attr">module</span>:&#123;</span><br><span class="line">        <span class="attr">rules</span>:[</span><br><span class="line">            <span class="comment">//loader的配置</span></span><br><span class="line">            &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, </span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&#x27;style-loader&#x27;</span>,<span class="string">&#x27;css-loader&#x27;</span>]<span class="comment">//将css资源编译成commonjs的模块到js中</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;   <span class="attr">test</span>:<span class="regexp">/\.(png|jpe?g|gif|webp|svg)$/</span>,</span><br><span class="line">            <span class="attr">type</span>:<span class="string">&#x27;asset&#x27;</span>,</span><br><span class="line">            <span class="attr">parser</span>: &#123;</span><br><span class="line">                <span class="attr">dataUrlCondition</span>: &#123;</span><br><span class="line">                    <span class="comment">//小于10kb的图片转base64</span></span><br><span class="line">                    <span class="comment">//优点:减少请求数量,缺点:体积增加</span></span><br><span class="line">                  <span class="attr">maxSize</span>: <span class="number">10</span> * <span class="number">1024</span> <span class="comment">// 4kb</span></span><br><span class="line">                &#125;</span><br><span class="line">              &#125;,</span><br><span class="line">              <span class="attr">generator</span>:&#123;</span><br><span class="line">                <span class="attr">filename</span>:<span class="string">&#x27;static/images/[hash:10][ext][query]&#x27;</span></span><br><span class="line">              &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;   <span class="attr">test</span>:<span class="regexp">/\.(ttf|woff2|mp3|avi)$/</span>,</span><br><span class="line">            <span class="attr">type</span>:<span class="string">&#x27;asset/resource&#x27;</span>,</span><br><span class="line">              <span class="attr">generator</span>:&#123;</span><br><span class="line">                <span class="attr">filename</span>:<span class="string">&#x27;static/media/[hash:10][ext][query]&#x27;</span></span><br><span class="line">              &#125;</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//插件</span></span><br><span class="line">    <span class="attr">plugins</span>:[</span><br><span class="line">        <span class="comment">//plugin的配置</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="comment">//模板:以public/index.html文件创建新的html文件</span></span><br><span class="line">            <span class="comment">//新的文件特点:1、结构和原来一致 2、自动引入打包的资源</span></span><br><span class="line">            <span class="attr">template</span>:path.<span class="title function_">resolve</span>(__dirname,<span class="string">&quot;../public/index.html&quot;</span>),</span><br><span class="line">        &#125;   </span><br><span class="line">        ),</span><br><span class="line">    ],</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//模式</span></span><br><span class="line">    <span class="attr">mode</span>:<span class="string">&quot;production&quot;</span>,</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx webpack serve --config ./config/webpack.dev.js</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> path=<span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> =&#123;</span><br><span class="line">    <span class="comment">//入口</span></span><br><span class="line">    <span class="attr">entry</span>:<span class="string">&quot;./src/main.js&quot;</span>,</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//输出</span></span><br><span class="line">    <span class="attr">output</span>:&#123;</span><br><span class="line">        <span class="comment">//所有文件的输出路径</span></span><br><span class="line">        <span class="comment">//开发环境没有输出</span></span><br><span class="line">        <span class="attr">path</span>:<span class="literal">undefined</span>,<span class="comment">//绝对路径</span></span><br><span class="line">        <span class="comment">//文件名</span></span><br><span class="line">        <span class="attr">filename</span>:<span class="string">&quot;static/js/main.js&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//加载器</span></span><br><span class="line">    <span class="attr">module</span>:&#123;</span><br><span class="line">        <span class="attr">rules</span>:[</span><br><span class="line">            <span class="comment">//loader的配置</span></span><br><span class="line">            &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, </span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&#x27;style-loader&#x27;</span>,<span class="string">&#x27;css-loader&#x27;</span>]<span class="comment">//将css资源编译成commonjs的模块到js中</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;   <span class="attr">test</span>:<span class="regexp">/\.(png|jpe?g|gif|webp|svg)$/</span>,</span><br><span class="line">            <span class="attr">type</span>:<span class="string">&#x27;asset&#x27;</span>,</span><br><span class="line">            <span class="attr">parser</span>: &#123;</span><br><span class="line">                <span class="attr">dataUrlCondition</span>: &#123;</span><br><span class="line">                    <span class="comment">//小于10kb的图片转base64</span></span><br><span class="line">                    <span class="comment">//优点:减少请求数量,缺点:体积增加</span></span><br><span class="line">                  <span class="attr">maxSize</span>: <span class="number">10</span> * <span class="number">1024</span> <span class="comment">// 4kb</span></span><br><span class="line">                &#125;</span><br><span class="line">              &#125;,</span><br><span class="line">              <span class="attr">generator</span>:&#123;</span><br><span class="line">                <span class="attr">filename</span>:<span class="string">&#x27;static/images/[hash:10][ext][query]&#x27;</span></span><br><span class="line">              &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;   <span class="attr">test</span>:<span class="regexp">/\.(ttf|woff2|mp3|avi)$/</span>,</span><br><span class="line">            <span class="attr">type</span>:<span class="string">&#x27;asset/resource&#x27;</span>,</span><br><span class="line">              <span class="attr">generator</span>:&#123;</span><br><span class="line">                <span class="attr">filename</span>:<span class="string">&#x27;static/media/[hash:10][ext][query]&#x27;</span></span><br><span class="line">              &#125;</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//插件</span></span><br><span class="line">    <span class="attr">plugins</span>:[</span><br><span class="line">        <span class="comment">//plugin的配置</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="comment">//模板:以public/index.html文件创建新的html文件</span></span><br><span class="line">            <span class="comment">//新的文件特点:1、结构和原来一致 2、自动引入打包的资源</span></span><br><span class="line">            <span class="attr">template</span>:path.<span class="title function_">resolve</span>(__dirname,<span class="string">&quot;../public/index.html&quot;</span>),</span><br><span class="line">        &#125;   </span><br><span class="line">        ),</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//开发服务器,不会输出资源，在内存中编译打包的</span></span><br><span class="line">    <span class="attr">devServer</span>:&#123;</span><br><span class="line">        <span class="attr">host</span>:<span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">        <span class="attr">port</span>:<span class="string">&#x27;3000&#x27;</span>,</span><br><span class="line">        <span class="attr">open</span>:<span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//模式</span></span><br><span class="line">    <span class="attr">mode</span>:<span class="string">&#x27;development&#x27;</span>,</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="其中的区别："><a href="#其中的区别：" class="headerlink" title="其中的区别："></a>其中的区别：</h1><h2 id="1、开发没有输出，也就是output里面的path设置成undefined"><a href="#1、开发没有输出，也就是output里面的path设置成undefined" class="headerlink" title="1、开发没有输出，也就是output里面的path设置成undefined"></a>1、开发没有输出，也就是output里面的path设置成undefined</h2><h2 id="2、开发者有开发服务器devServer"><a href="#2、开发者有开发服务器devServer" class="headerlink" title="2、开发者有开发服务器devServer{}"></a>2、开发者有开发服务器devServer{}</h2><h2 id="3、开发者的mode是development，生产者是production"><a href="#3、开发者的mode是development，生产者是production" class="headerlink" title="3、开发者的mode是development，生产者是production"></a>3、开发者的mode是development，生产者是production</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> webpack </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>webpack-08启动命令优化</title>
+      <link href="/posts/340b.html"/>
+      <url>/posts/340b.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1、在package-json中"><a href="#1、在package-json中" class="headerlink" title="1、在package.json中"></a>1、在package.json中</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>:<span class="string">&quot;npm run dev&quot;</span>,</span><br><span class="line">    <span class="string">&quot;dev&quot;</span>:<span class="string">&quot;webpack serve --config ./config/webpack.dev.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build&quot;</span>:<span class="string">&quot;webpack --config ./config/webpack.prod.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure><p><strong>“dev”  对应的webpack.dev.config文件npm run dev</strong></p><p><strong>“build”对应的webpack.prod.config文件npm run build</strong></p><p><strong>“start”运行上面的自定义指令”dev”         npm start(也就是npm run dev 等价于 npm start )</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> webpack </category>
           
       </categories>
       
@@ -650,25 +650,6 @@
     
     
     <entry>
-      <title>尾递归</title>
-      <link href="/posts/7e79.html"/>
-      <url>/posts/7e79.html</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="comment">//递归老思路</span></span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params">x</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(x===<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> x+ <span class="title function_">f1</span>(x-<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">f1</span>(<span class="number">5</span>)); </span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"><span class="comment">//中间加个处理变量即可，每次返回的参数不引用上次的参数</span></span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">tailrecsum</span>(<span class="params">x, running_total = <span class="number">0</span></span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (x === <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> running_total;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="title function_">tailrecsum</span>(x - <span class="number">1</span>, running_total + x);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">tailrecsum</span>(<span class="number">5</span>)); </span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>继承的方式</title>
       <link href="/posts/a354.html"/>
       <url>/posts/a354.html</url>
@@ -686,14 +667,33 @@
     </entry>
     
     
+    
+    <entry>
+      <title>尾递归</title>
+      <link href="/posts/7e79.html"/>
+      <url>/posts/7e79.html</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="comment">//递归老思路</span></span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params">x</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(x===<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> x+ <span class="title function_">f1</span>(x-<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">f1</span>(<span class="number">5</span>)); </span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"><span class="comment">//中间加个处理变量即可，每次返回的参数不引用上次的参数</span></span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">tailrecsum</span>(<span class="params">x, running_total = <span class="number">0</span></span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (x === <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> running_total;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="title function_">tailrecsum</span>(x - <span class="number">1</span>, running_total + x);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">tailrecsum</span>(<span class="number">5</span>)); </span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
   
   
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -702,9 +702,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
