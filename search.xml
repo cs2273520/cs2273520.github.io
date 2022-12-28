@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>关于axios中使用post的问题</title>
+      <link href="/posts/91e3.html"/>
+      <url>/posts/91e3.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="axios-中进行-post-请求后端可能无法通过-query-或者-body-获取参数"><a href="#axios-中进行-post-请求后端可能无法通过-query-或者-body-获取参数" class="headerlink" title="axios 中进行 post 请求后端可能无法通过 query 或者 body 获取参数"></a>axios 中进行 post 请求后端可能无法通过 query 或者 body 获取参数</h2><h2 id="1、在-axios-中设置"><a href="#1、在-axios-中设置" class="headerlink" title="1、在 axios 中设置"></a>1、在 axios 中设置</h2><p>headers: {<br>‘Content-Type’: ‘application&#x2F;x-www-form-urlencoded’,<br>Accept: ‘application&#x2F;json’<br>}</p><h2 id="2、后端-node-js-配合-body-parser"><a href="#2、后端-node-js-配合-body-parser" class="headerlink" title="2、后端 node.js 配合 body-parser"></a>2、后端 node.js 配合 body-parser</h2><p>const bodyParser &#x3D; require(“body-parser”);<br>app.use(bodyParser.urlencoded({ extended: false }));<br>然后就可以通过 body 获取参数了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue组件之间传值</title>
       <link href="/posts/7b0.html"/>
       <url>/posts/7b0.html</url>
