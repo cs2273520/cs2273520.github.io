@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>vue动画</title>
+      <link href="/posts/718d.html"/>
+      <url>/posts/718d.html</url>
+      
+        <content type="html"><![CDATA[<p>vue 动画&#x3D;&#x3D;&#x3D;</p><p>html 核心代码</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    &lt;button v-on:click=&quot;show = !show&quot;&gt;Toggle&lt;/button&gt;</span><br><span class="line">    &lt;transition name=&quot;fade&quot;&gt;</span><br><span class="line">      &lt;p v-if=&quot;show&quot;&gt;hello&lt;/p&gt;</span><br></pre></td></tr></table></figure><p>css 核心代码</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.fade-enter &#123;</span><br><span class="line">  opacity: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-enter-active &#123;</span><br><span class="line">  transition: opacity 2s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-enter-to &#123;</span><br><span class="line">  opacity: 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-leave &#123;</span><br><span class="line">  opacity: 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-leave-active &#123;</span><br><span class="line">  transition: opacity 2s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-leave-to &#123;</span><br><span class="line">  opacity: 0;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue2.x </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>代码提交规范</title>
       <link href="/posts/fd99.html"/>
       <url>/posts/fd99.html</url>
