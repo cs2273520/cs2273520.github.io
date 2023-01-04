@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>vue3中使用refs</title>
+      <link href="/posts/bfb4.html"/>
+      <url>/posts/bfb4.html</url>
+      
+        <content type="html"><![CDATA[<p>不同于 vue2，可以直接在页面中使用<br>this.$refs.元素绑定名<br>在 vue3 中，已经取消了这种用法，使用方法：<br>1、</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123;getCurrentInstance&#125; from &#x27;vue&#x27;</span><br></pre></td></tr></table></figure><p>2、</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const &#123; proxy &#125; = getCurrentInstance()</span><br></pre></td></tr></table></figure><p>3、<br>元素中给一个属性 ref&#x3D;”元素绑定名”</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">proxy.$refs.元素绑定名</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue3.x </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue动画</title>
       <link href="/posts/718d.html"/>
       <url>/posts/718d.html</url>
       
-        <content type="html"><![CDATA[<p>vue 动画&#x3D;&#x3D;&#x3D;</p><p>html 核心代码</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    &lt;button v-on:click=&quot;show = !show&quot;&gt;Toggle&lt;/button&gt;</span><br><span class="line">    &lt;transition name=&quot;fade&quot;&gt;</span><br><span class="line">      &lt;p v-if=&quot;show&quot;&gt;hello&lt;/p&gt;</span><br></pre></td></tr></table></figure><p>css 核心代码</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.fade-enter &#123;</span><br><span class="line">  opacity: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-enter-active &#123;</span><br><span class="line">  transition: opacity 2s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-enter-to &#123;</span><br><span class="line">  opacity: 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-leave &#123;</span><br><span class="line">  opacity: 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-leave-active &#123;</span><br><span class="line">  transition: opacity 2s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-leave-to &#123;</span><br><span class="line">  opacity: 0;</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="vue-动画"><a href="#vue-动画" class="headerlink" title="vue 动画"></a>vue 动画</h1><p><img src="/images/vue/vue%E5%8A%A8%E7%94%BB.jpg"></p><p>html 核心代码</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    &lt;button v-on:click=&quot;show = !show&quot;&gt;Toggle&lt;/button&gt;</span><br><span class="line">    &lt;transition name=&quot;fade&quot;&gt;</span><br><span class="line">      &lt;p v-if=&quot;show&quot;&gt;hello&lt;/p&gt;</span><br></pre></td></tr></table></figure><p>css 核心代码</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.fade-enter &#123;</span><br><span class="line">  opacity: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-enter-active &#123;</span><br><span class="line">  transition: opacity 2s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-enter-to &#123;</span><br><span class="line">  opacity: 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-leave &#123;</span><br><span class="line">  opacity: 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-leave-active &#123;</span><br><span class="line">  transition: opacity 2s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade-leave-to &#123;</span><br><span class="line">  opacity: 0;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
