@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>vue3中使用elementplus中的多选框操作</title>
+      <link href="/posts/3da3.html"/>
+      <url>/posts/3da3.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1、在-el-table-中添加如下属性"><a href="#1、在-el-table-中添加如下属性" class="headerlink" title="1、在 el-table 中添加如下属性"></a>1、在 el-table 中添加如下属性</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@selection-change=&quot;handleSelectionChange&quot;</span><br></pre></td></tr></table></figure><h1 id="2、定义方法，获取选中内容"><a href="#2、定义方法，获取选中内容" class="headerlink" title="2、定义方法，获取选中内容"></a>2、定义方法，获取选中内容</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const handleSelectionChange = (selection) =&gt; &#123;</span><br><span class="line">  console.log(selection)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue3.x </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue3中使用refs</title>
       <link href="/posts/bfb4.html"/>
       <url>/posts/bfb4.html</url>
