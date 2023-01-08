@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>微信小程序使用sass</title>
+      <link href="/posts/d61f.html"/>
+      <url>/posts/d61f.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h1><p>从微信开发者工具中选择 拓展—-&gt;导入已安装的 vscode 拓展—-&gt;拓展设置—-&gt;搜索 Easysass:Formats—-&gt;点开在 setting.json 中编辑修改 easysass.formats</p><h1 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h1><p>修改 easysass.formats 中 extension 为.wxss</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> wechat </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue3中使用elementplus中的多选框操作</title>
       <link href="/posts/3da3.html"/>
       <url>/posts/3da3.html</url>
