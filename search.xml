@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>vue3中使用rem</title>
+      <link href="/posts/3299.html"/>
+      <url>/posts/3299.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、在根文件的-index-html-中直接加入"><a href="#1、在根文件的-index-html-中直接加入" class="headerlink" title="1、在根文件的 index.html 中直接加入"></a>1、在根文件的 index.html 中直接加入</h2>  <script>    (function (doc, win) {      var docEl = doc.documentElement,        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',        recalc = function () {          var clientWidth = docEl.clientWidth;          if (!clientWidth) return;          if (clientWidth >= 640) {            docEl.style.fontSize = '16px';          } else {            docEl.style.fontSize = 16 * (clientWidth / 640) + 'px';          }        };      if (!doc.addEventListener) return;      win.addEventListener(resizeEvt, recalc, false);      doc.addEventListener('DOMContentLoaded', recalc, false);    })(document, window);  </script><h2 id="2、meta-设置"><a href="#2、meta-设置" class="headerlink" title="2、meta 设置"></a>2、meta 设置</h2> <meta name="viewport" content="user-scalable=0,width=device-width, initial-scale=1.0"><h2 id="3、完成页面布局，先全部使用-px，代页面完善后用-px-to-rem-插件进行转换即可"><a href="#3、完成页面布局，先全部使用-px，代页面完善后用-px-to-rem-插件进行转换即可" class="headerlink" title="3、完成页面布局，先全部使用 px，代页面完善后用 px to rem 插件进行转换即可"></a>3、完成页面布局，先全部使用 px，代页面完善后用 px to rem 插件进行转换即可</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue3.x </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>小程序地图</title>
       <link href="/posts/a64f.html"/>
       <url>/posts/a64f.html</url>
